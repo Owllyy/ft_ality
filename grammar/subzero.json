@@ -1,0 +1,42 @@
+{
+    "character_name" : "subzero",
+    "initial" : "Idle",
+    "KeyMap": {
+        "w" : "Up",
+        "s" : "Down",
+        "a" : "Left",
+        "d" : "Right",
+        "y" : "BackPunch",
+        "u" : "FrontPunch",
+        "i" : "Throw",
+        "h" : "BackKick",
+        "j" : "FrontKick",
+        "k" : "Stance"
+    },
+    "States": {
+        "Idle": {
+            "combo": [
+                { "key" : "Up", "to_state": "Jump"}
+            ],
+            "comboTimeout": "0",
+            "write": ""
+        },
+        "Jump": {
+            "combo": [
+                { "key" : "FrontPunch", "to_state": "JumpPunch"}
+            ],
+            "comboTimeout": "0.8",
+            "write": " jumping !!"
+        },
+        "FrontPunch": {
+            "combo": [],
+            "comboTimeout": "0.3",
+            "write": " front punch !!"
+        },
+        "JumpPunch": {
+            "combo": [],
+            "comboTimeout": "0.3",
+            "write": " jump punch !!"
+        }
+    }
+}
